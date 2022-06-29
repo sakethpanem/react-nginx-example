@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sakethpanemreactnginxexample 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sakethpanemreactnginxexample
+  template:
+    metadata:
+      labels:
+        app: sakethpanemreactnginxexample 
+    spec:
+      containers:
+        - name: sakethpanemreactnginxexample 
+          image: janasenaregistry.azurecr.io/sakethpanemreactnginxexample
+          ports:
+          - containerPort: 80
